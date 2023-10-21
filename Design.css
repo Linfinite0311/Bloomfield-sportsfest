@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #410F57;
+}
+
+h1 {
+  color:#C9A2EC;
+  font-family: "Impact";
+  font-size: 70px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+
+.intro-section {
+    background-image: url("Images/background-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    text-align: center; /* Center content horizontally */
+    color: white; /* Set default text color */
+}
+
+.second-section{
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 100vh; /* Make the container take up the full viewport height */
+}
+
+.introduction-container {
+    max-width: 600px; /* Limit width on larger screens for readability */
+    margin: 0 auto; /* Center container horizontally */
+    padding: 20px;
+}
+
+.logo {
+    max-width: 100%; /* Ensure the logo doesn't overflow its container */
+}
+
+.name {
+    font-size: 50px; /* Adjust font size for smaller screens */
+    font-family: "Impact";
+    margin-top: 20px; /* Add spacing between elements */
+}
+
+.date {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    font-family: sans-serif;
+    margin-top: 10px; /* Add spacing between elements */
+}
+
+.button {
+    padding: 10px 20px;
+    margin-top: 20px; /* Add spacing between elements */
+    background-color: #410F57;
+    color: #C9A2EC;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.button:hover {
+    font-size: 24px; /* Adjust font size on hover */
+    font-weight: bolder;
+}
+
+.timer-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow boxes to wrap on smaller screens */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 55  px;
+}
+
+.box {
+    flex: 0 0 calc(25% - 20px); /* Adjust box size for different screen sizes */
+    background-color: #410F57;
+    text-align: center;
+    border: 1px solid #C9A2EC;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    color: #C9A2EC;
+}
+
+.box-number {
+    font-size: 24px; /* Adjust font size for smaller screens */
+    font-weight: bold;
+}
+
+.box-subword {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    margin-top: 10px;
+}
+
+.BHS-Logo {
+  width: 20%;
+
+}
+
+.button2 {
+  padding: 10px 20px;
+  margin-top: 20px; /* Add spacing between elements */
+  background-color: #C9A2EC;
+  color: #410F57;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.5s;
+  align-items: center;
+}
+
+
+.options {
+  margin-left: 100px
+}
+
+.third-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.third-section h1 {
+  font-size: 50px;
+  font-family: "Impact";
+  text-decoration: underline;
+  margin-bottom: 2rem;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem; /* Space between boxes */
+  border-style: solid;
+  border: black;
+}
+
+.team-box {
+  flex-basis: calc(50% - 1rem); /* Taking into account the gap */
+  padding: 1rem;
+  border: 2px solid #C9A2EC;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #C9A2EC;
+
+}
+
+.team-box h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: "Comfortaa";
+}
+
+.team-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: "Comfortaa";
+}
+nav {
+  background: #410F57;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+}
+nav .mainMenu {
+  display: flex;
+  list-style: none;
+}
+nav .mainMenu li a {
+  display: inline-block;
+  padding: 10px;
+  padding-bottom: 40px;
+  padding-top: 50px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  transition: 0.2s ease;
+}
+nav .mainMenu li a:hover {
+  background: #C9A2EC;
+}
+nav .openMenu {
+  font-size: 2rem;
+  margin: 10px;
+  display: none;
+  cursor: pointer;
+}
+nav .mainMenu .closeMenu,
+.icons i {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  nav .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #410F57;
+    transition: top 1s ease 0s;
+    display: none;
+
+    
+  }
+
+  .BHS-Logo {
+    width: 100px
+  }
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  nav .openMenu {
+    display: block;
+  }
+  nav .mainMenu li a:hover {
+    background: none;
+    color: rgb(255, 123, 0);
+  }
+  .icons i {
+    display: inline-block;
+    padding: 12px;
+  }
+}
+
+.container {
+	padding: 2rem;
+  max-width: 100%;
+}
+
+.slider-wrapper {
+	position: relative;
+	max-width: 48rem;
+	margin: 0 auto;
+}
+
+.slider {
+	display: flex;
+	aspect-ratio: 16 / 9;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+	border-radius: 0.5rem;
+	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+	scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+	display: none;
+}
+
+.slider img {
+  width: 40%;
+	scroll-snap-align: start;
+	object-fit: contain; /* Adjusted object-fit */
+}
+
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.slider-nav a {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+	opacity: 1;
+}
+
+
+@media (max-width: 600px) {
+    
+    /* Ensuring the images sit side-by-side without any gaps */
+    .slider {
+        display: block; /* Reset the flex behavior on mobile */
+        white-space: nowrap; /* Prevents wrapping of inline or inline-block elements */
+    }
+    
+    .slider img {
+        width: 50%;
+        display: inline-block; /* Allows images to sit side-by-side */
+    }
+
